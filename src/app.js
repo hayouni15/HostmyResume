@@ -29,8 +29,7 @@ app.get('/portfolio', function (req, res) {
   res.render('portfolio.hbs')
 })
 
-
-
-app.listen(3000,()=>{
-    console.log('running on port ', 3000)
+const port = process.env.PORT||3000; // to add heroku port
+app.listen(port,()=>{
+    console.log('running on port ', port)
 })
