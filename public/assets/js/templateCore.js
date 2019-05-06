@@ -3,9 +3,93 @@ $(document).ready(function () {
     if ($.fn.unveil) {
         $("img").unveil();
     }
+//sign in 
+const $signin =document.querySelector('#signin')
+$signin.addEventListener('click',()=>{
+  const email = document.querySelector('#signinEmail').value
+  const password = document.querySelector('#signinPW').value
+
+  console.log(password, email)
+    fetch('/login', {
+            method: "POST", // *GET, POST, PUT, DELETE, etc.
+
+            headers: {
+                "Content-Type": "application/json",
+                // "Content-Type": "application/x-www-form-urlencoded",
+            },
+            referrer: "no-referrer", // no-referrer, *client
+            body: JSON.stringify({
+                "User_email":email,
+                "User_Password":password
+            }), // body data type must match "Content-Type" header
+        }).then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            if (data.errors) {
+                console.log('error :',data.errors)
+               
+               
+            }
+            else{
+                console.log(data)
+                window.location.href = `/accountManager/${data.token._id}`;
+            }
+        })
+})
+    // add user
+const $addUserbtn = document.querySelector('#subscribe')
+$addUserbtn.addEventListener('click', () => {
+    const name = document.querySelector('#User-name').value
+    const email = document.querySelector('#User-email').value
+    const password = document.querySelector('#User-password').value
+
+    console.log(name, email)
+    fetch('/addUser', {
+            method: "POST", // *GET, POST, PUT, DELETE, etc.
+
+            headers: {
+                "Content-Type": "application/json",
+                // "Content-Type": "application/x-www-form-urlencoded",
+            },
+            referrer: "no-referrer", // no-referrer, *client
+            body: JSON.stringify({
+                "User_name":name,
+                "User_email":email,
+                "User_Password":password
+            }), // body data type must match "Content-Type" header
+        }).then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            if (data.error) {
+                console.log(data)
+                $('#failure').css('display','block')
+            }
+            else{
+                console.log(data)
+                $('.toHideAfterSignup').hide()
+                $('#success').css('display','block')
+                setTimeout(()=>{$('#modal1').hide()},1500)
+            }
+        })
+})
+
     // template slider
   
-   
+    $("#register").click(() => {
+      $('#modal1').css("display", "block");
+      $("#signin-modal").css("display","none");
+      $("#signup-modal").css("display","block");
+  })
+  $(".modalclose").click(()=>{
+      $('#modal1').css("display", "none");
+  })
+  $("#login").click(() => {
+      $('#modal1').css("display", "block");
+      $("#signup-modal").css("display","none");
+      $("#signin-modal").css("display","block");
+  })
       // Dynamic content
       
       var index = 0;

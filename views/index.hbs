@@ -249,13 +249,142 @@
         </div>
         <div class="section" style="    background: white;">
             <div class="">
+                <div id="modal1" style="display:none">
+                    <div class="limiter">
+                        <div class="container-login100">
+                            <div class="wrap-login100">
+                                <form id="signin-modal" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+                                    <span class="modalclose">
+                                        x
+                                    </span>
+                                    <span class="login100-form-title">
+                                        Sign In
+                                    </span>
+
+                                    <div class="wrap-input100 validate-input m-b-16"
+                                        data-validate="Please enter username">
+                                        <input class="input100" type="email" id="signinEmail" name="email" placeholder="Email">
+                                        <span class="focus-input100"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input" data-validate="Please enter password">
+                                        <input class="input100" type="password" id="signinPW" name="pass" placeholder="Password">
+                                        <span class="focus-input100"></span>
+                                    </div>
+
+                                    <div class="forgot">
+                                        <span class="txt1">
+                                            Forgot
+                                        </span>
+
+                                        <a href="#" class="txt2">
+                                            Username / Password?
+                                        </a>
+                                    </div>
+
+                                    <div class="container-login100-form-btn">
+                                        <div class="btn btn-primary btn-lg  btn-large m-r-10" id="signin">
+                                            Sign in
+                                        </div>
+                                    </div>
+
+                                    <div class="forgot">
+                                        <span class="txt1 p-b-9">
+                                            Don’t have an account?
+                                        </span>
+
+                                        <a href="#" class="txt3">
+                                            Sign up now
+                                        </a>
+                                    </div>
+                                </form>
+                                <form id="signup-modal" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+                                    <span class="modalclose">
+                                        x
+                                    </span>
+                                    <span class="login100-form-title">
+                                        Register
+                                    </span>
+                                    <div id="success" class="media" style="display:none; color: #2ec574;">
+                                        <div class="mr-3 align-self-center">
+                                            <i class="fas fa-check-circle fa-4x"></i>
+                                        </div>
+
+                                        <div class="">
+                                            <h3 class="font-weight-semibold mb-0">Congratulations , you have been
+                                                successfully subscribed</h3>
+
+                                        </div>
+                                    </div>
+                                    <div id="failure" class="media" style="display:none; color: red;">
+                                        <div class="mr-3 align-self-center">
+                                            <i class="fas fa-times-circle  fa-4x"></i>
+                                        </div>
+
+                                        <div class="">
+                                            <h3 class="font-weight-semibold mb-0">Failure, try a different email</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="wrap-input100 validate-input m-b-16 toHideAfterSignup"
+                                        data-validate="Please enter username">
+                                        <input class="input100" type="text" name="username" id="User-name"
+                                            placeholder="Username">
+                                        <span class="focus-input100"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input toHideAfterSignup" data-validate="Please enter password">
+                                        <input class="input100" type="text" id="User-password" name="pass"
+                                            placeholder="Password">
+                                        <span class="focus-input100"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input toHideAfterSignup" data-validate="Please enter password">
+                                        <input class="input100" type="email" id="User-email" name="pass"
+                                            placeholder="Email">
+                                        <span class="focus-input100"></span>
+                                    </div>
+
+                                    <div class="forgot toHideAfterSignup">
+                                        <span class="txt1">
+                                            Forgot
+                                        </span>
+
+                                        <a href="#" class="txt2">
+                                            Username / Password?
+                                        </a>
+                                    </div>
+
+                                    <div class="container-login100-form-btn toHideAfterSignup">
+                                        <div id="subscribe" class="btn btn-primary btn-lg  btn-large m-r-10">
+                                            Sign up
+                                        </div>
+                                    </div>
+
+                                    <div class="forgot toHideAfterSignup">
+                                        <span class="txt1 p-b-9">
+                                            Don’t have an account?
+                                        </span>
+
+                                        <a href="#" class="txt3">
+                                            Sign up now
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="p-t-40 p-b-40  text-center">
                     <h2 class="text-center">
                         Join Now and Host your Resume for free</h2>
-                    <a style="width: 100px;" href="#" class="btn btn-primary btn-lg  btn-large m-r-10">Register</a>
-                    <a style="width: 100px;" href="#" class="btn btn-primary btn-lg  btn-large m-r-10">LogIn</a>
+                    <div style="width: 100px;" id="register" class="btn btn-primary btn-lg  btn-large m-r-10">Register
+                    </div>
+                    <div style="width: 100px;" id="login" class="btn btn-primary btn-lg  btn-large m-r-10">LogIn</div>
                 </div>
             </div>
+
 
         </div>
         <div class="section white ha-waypoint" data-animate-down="ha-header-color" data-animate-up="ha-header-hide">
@@ -415,7 +544,7 @@
                 </div>
             </div>
         </div>
-        <div class="section dark-grey" style="background:#2dc47526">
+        <div class="section dark-grey" style="background:#f2f4f6">
             <div class="">
                 <div class="p-t-80">
                     <div class="row">
@@ -622,13 +751,22 @@
         </div>
         <div class="section white" style="    text-align: center;margin:auto">
             <div class="">
-                <div class="p-t-60 p-b-50 " style="        width: 68%;margin: auto;margin-right: 145px;">
+                <div class="p-t-60 p-b-50 " style="        width: 68%;margin: auto;">
                     <div class="row feature-list">
                         <div class="col-md-3 ">
                             <h4 class="custom-font title">
                                 Free Templates</h4>
                             <h1 class="custom-font">
                                 <span class="number-animator">03</span>
+                            </h1>
+
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="custom-font title">
+                                <i class="far fa-grin-stars"></i>
+                                Premium Templates</h4>
+                            <h1 class="custom-font">
+                                <span class="number-animator">10+</span>
                             </h1>
 
                         </div>
@@ -650,6 +788,83 @@
 
                         </div>
 
+                    </div>
+                    <div id="price" style="margin-top: 85px;">
+                        <!--price tab-->
+                        <h2 class="text-center">
+                            Join Now and Host your Resume for free</h2>
+                        <div class="plan">
+                            <div class="plan-inner">
+                                <div class="entry-title">
+                                    <h3>Standard</h3>
+                                    <div class="price">Free<span>/Basic</span>
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <ul>
+                                        <li><strong>1x</strong> Basic Template</li>
+                                        <li><strong>1x</strong> Resume</li>
+                                        <li><strong>No</strong> Technical Support</li>
+                                        <li><strong>.</strong> </li>
+                                        <li><strong>.</strong> </li>
+                                    </ul>
+                                </div>
+                                <div class="btn">
+                                    <a href="#" class="btn btn-primary btn-lg  btn-large m-r-10">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of price tab-->
+                        <!--price tab-->
+                        <div class="plan basic">
+                            <div class="plan-inner">
+                                <div class="hot">hot</div>
+                                <div class="entry-title">
+                                    <h3>Premium</h3>
+                                    <div class="price">$4.99<span>/PER Template</span>
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <ul>
+                                        <li><strong>1x</strong> Premium Template</li>
+                                        <li><strong>10+x</strong> Premium Templates to chose from</li>
+                                        <li><strong>2x</strong> Resumes</li>
+                                        <li><strong>24h</strong> Technical support</li>
+                                        <li><strong>6months</strong> plan</li>
+                                    </ul>
+                                </div>
+                                <div class="btn">
+                                    <a href="#" class="btn btn-primary btn-lg  btn-large m-r-10">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of price tab-->
+                        <!--price tab-->
+                        <div class="plan standard">
+                            <div class="plan-inner">
+                                <div class="entry-title">
+                                    <h3>Gold</h3>
+                                    <div class="price">$19.99<span>/PER year</span>
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <ul>
+                                        <li><strong>All</strong> Premium Templates unlocked</li>
+                                        <li><strong>Easily</strong> switch between Templates</li>
+                                        <li><strong>2x</strong> Resumes</li>
+                                        <li><strong>24h</strong> Technical support</li>
+                                        <li><strong>12months </strong> plan</li>
+                                    </ul>
+                                </div>
+                                <div class="btn">
+                                    <a href="#" class="btn btn-primary btn-lg  btn-large m-r-10">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of price tab-->
+                        <!--price tab-->
+
+                        <!-- end of price tab-->
                     </div>
                 </div>
             </div>
@@ -889,12 +1104,13 @@
                 style=" bottom: 74px;right: 98px;position: fixed;width: 0px;display:none;font-size: 2px;background: rgb(39, 171, 225);border-radius: 16px;color: white;"
                 class="popover-content rd-notice-content js-invitation-greeting">
                 <span id="closebot" style="float:right">X</span>
-                Hey, I’m ready to help you! 
+                Hey, I’m ready to help you!
                 <form action="#0" id="user-input-form">
-                    <input style="width: 159px;" type="text" id="user-input" class="user-input" placeholder="Talk to the bot.">
+                    <input style="width: 159px;" type="text" id="user-input" class="user-input"
+                        placeholder="Talk to the bot.">
                 </form>
-                </div>
-                
+            </div>
+
 
         </div>
 
